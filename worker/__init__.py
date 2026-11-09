@@ -1,0 +1,1 @@
+"""OpenDock's provider-independent Boltz-2 worker core."""

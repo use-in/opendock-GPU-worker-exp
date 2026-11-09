@@ -1,0 +1,17 @@
+{
+  "job_id": "example-boltz-001",
+  "attempt": 1,
+  "protein_sequence": "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+  "ligand_smiles": "CCO",
+  "msa": {
+    "mode": "s3",
+    "s3_uri": "s3://YOUR_BUCKET/msa-cache/ubiquitin.a3m"
+  },
+  "output_s3_prefix": "s3://YOUR_BUCKET/jobs/example-boltz-001/attempt-1/",
+  "options": {
+    "recycling_steps": 3,
+    "sampling_steps": 200,
+    "diffusion_samples": 1,
+    "affinity": false
+  }
+}

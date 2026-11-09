@@ -1,0 +1,24 @@
+{
+  "batch_id": "routed-smoke-001",
+  "attempt": 1,
+  "protein_sequence": "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG",
+  "msa": {
+    "mode": "empty"
+  },
+  "ligands": [
+    {
+      "id": "ethanol",
+      "smiles": "CCO"
+    },
+    {
+      "id": "acetic_acid",
+      "smiles": "CC(=O)O"
+    }
+  ],
+  "options": {
+    "recycling_steps": 1,
+    "sampling_steps": 20,
+    "diffusion_samples": 1,
+    "affinity": false
+  }
+}

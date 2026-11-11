@@ -108,7 +108,8 @@ def predict_demo() -> dict:
     from worker.pipeline import execute
 
     test_job = {
-        "job_id": "modal-smoke",
+        "job_id": "modal-smoke-profile-01",
+        ####"jon_id": "modal-smoke",
         "attempt": 1,
 
         "protein_sequence":
@@ -152,6 +153,8 @@ def gpu():
     )
 
 
+#######
+"""
 @app.local_entrypoint()
 def smoke():
 
@@ -169,4 +172,24 @@ def smoke():
         "Download: modal volume get "
         "opendock-boltz-demo-results "
         "modal-smoke ./modal-smoke-output"
+    )
+"""
+#######
+@app.local_entrypoint()
+def smoke():
+
+    result = predict_demo.remote()
+
+    print(
+        json.dumps(
+            result,
+            indent=2,
+            ensure_ascii=False
+        )
+    )
+
+    print(
+        "Download: modal volume get "
+        "opendock-boltz-demo-results "
+        "modal-smoke-profile-01 ./modal-profile-download"
     )
